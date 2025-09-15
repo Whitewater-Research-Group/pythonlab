@@ -1,9 +1,10 @@
 Report on Debugging and Testing the Quadratic Program
 
 DEBUGGING PROCESS
-Debugging the program was carried out using the Python Debugger extension from the Visual Studio Code extension store. Initially, when declaring the variable as:
+We debugged the program using the Python Debugger extension from the Visual Studio Code extension store. Initially, when declaring "a" the variable as:
 a = input("input a: ")
-an error occurred when attempting to use the math.sqrt() function. The debugger highlighted this issue, making it straightforward to identify and resolve.
+an error occurred when attempting to use the math.sqrt() function. The debugger highlighted this issue, making it straightforward to identify and resolve. It was a TypeError caused by attempting to use math functions on a the output gotten from the input() function, which is always a String. This was fixed by declaring the variable as:
+a = float(input("input a: "))
 The debugging process was initiated by selecting "Run" from the menu bar and then clicking "Start Debugging" from the drop-down menu. This allowed us to step through the code, observe the error, and make the necessary corrections.
 
 TESTING WITH PYTEST
@@ -13,8 +14,6 @@ pip install pytest
 
 A separate test script named test_quadratic.py was created. Within this script, we used the assert keyword to verify the program’s correctness by supplying known values for the coefficients a, b, and c. The expected outputs were compared with the actual results returned by the function.
 To make the program testable, the main logic for solving quadratic equations was encapsulated in a function called findRoots(). This ensured that the function fould be tested independently.
-
-RUNNING THE TESTS
 To execute the tests, we used the command line.
 First we navigated to the project folder using the command:
 cd C:\Users\Admin\Documents\python_assignments
@@ -24,4 +23,5 @@ This command executed all test cases in verbose mode, clearly showing whether th
 
 
 CONCLUSION
-The debugging extension in VS Code greatly simplified the error-identification process, while the use of pytest provided a reliable way to verify the correctness of the program. Together, these tools ensured that the program was both functional and well-tested.
+The debugging extension in VS Code greatly simplified the error-identification process specifically highlighting that it was a TypeError, while the use of pytest provided a reliable way to verify the correctness of the program. Together, these tools ensured that the program was both functional and well-tested.
+
