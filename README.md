@@ -1,3 +1,5 @@
+#pythonlab
+
 def quadratic_solver(a: float, b: float, c: float):
     """
     Solves quadratic equation ax^2 + bx + c = 0
