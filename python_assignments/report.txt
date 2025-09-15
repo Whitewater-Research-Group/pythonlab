@@ -1,0 +1,18 @@
+
+Debugging the program was straightforward thanks to the python debugging extentension
+that we got from the vscode extension store. When we first declared the variables a = input("input a: ")
+we got an error from the debuugger and it highligted the error when we tried using math.sqrt()
+We utilized this extension by clicking on "Run" from the menu bar and then on "start debugging" from the drop-
+down menu.
+
+We tested our program by installing the pytest library
+pytest was installed by running pip install pytest in the command line.
+when pytest was installed we made a script test_quadratic.py
+and we used the assert keyword to test the program by passing values for a, b and c 
+that had known outputs; allowing us to verify if the program was working correctly.
+The program is in a function called findRoots() to allow the testing.
+To actually test the program, we copied the address of the project folder and typed
+cd C:\Users\Admin\Documents\python_assignments into the command line to change the directory.
+then we used the command   pytest -v   to test the program
+
+
