@@ -1,3 +1,0 @@
-# pythonlab
-
-Python Lab
