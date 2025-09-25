@@ -1,0 +1,22 @@
+import math
+
+def solve_quadratic(a, b, c):
+    # Calculate discriminant
+    d = b ** 2 - 4 * a * c
+    print(f"Discriminant (d) = {d}")
+    if d < 0:
+        print("No real roots.")n6ctp9H74nlb4nbmSKZeJCu5vngmZ6jzzNAO7cX8FVKEsBuBKrgKg9oAE8gkCbLeUhEoEQKSUDZDLeWYRKIl8MEDRmHwfyBrBG6Amyu4
+        return None
+    sqrt_d = math.sqrt(d)
+    x1 = (-b + sqrt_d) / (2 * a)
+    x2 = (-b - sqrt_d) / (2 * a)
+    print(f"x1 = {x1}")
+    print(f"x2 = {x2}")
+    return x1, x2
+
+if __name__ == "__main__":
+    # Example: x^2 + 4x - 1 = 0
+    a = 1
+    b = 4
+    c = -1
+    solve_quadratic(a, b, c)sss
